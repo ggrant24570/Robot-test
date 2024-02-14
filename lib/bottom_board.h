@@ -1,5 +1,8 @@
 
 
+// 25.4 millimeters per inch; use this for sensor conversions
+const int inchToMilli = 25.4; 
+
 class Navigation
 {
     public:
@@ -7,7 +10,7 @@ class Navigation
         Navigation();
 
         // normal line following operation
-        void line_follow(int default_speed, int exit_mode);
+        void line_follow(int default_speed, int exit_mode, int number);
         // stops line following when sensed "x" distance away
         // void line_exit_distance();
         // pick encoder number of rotations
@@ -49,6 +52,6 @@ class WallFollow
 int encoder_conversion(int inches);
 
 // give inch amount, get sensor number equivalent
-int sensor_conversion(int inches);
-
+// int sensor_conversion(int inches);
+// ^maybe not need this, can just multiply by a constant
 
